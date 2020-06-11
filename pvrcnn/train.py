@@ -76,7 +76,7 @@ def build_lr_scheduler(optimizer, cfg, start_epoch, N):
     last_epoch = start_epoch * N / cfg.TRAIN.BATCH_SIZE
     scheduler = torch.optim.lr_scheduler.OneCycleLR(
         optimizer, max_lr=0.01, steps_per_epoch=N,
-        epochs=cfg.TRAIN.EPOCHS, last_epoch=last_epoch)
+        epochs=cfg.TRAIN.EPOCHS)
     return scheduler
 
 

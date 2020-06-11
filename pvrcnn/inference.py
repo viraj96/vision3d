@@ -22,7 +22,7 @@ def get_model(cfg):
     anchors = AnchorGenerator(cfg).anchors
     preprocessor = Preprocessor(cfg)
     model = Second(cfg).cuda().eval()
-    ckpt = torch.load('../pvrcnn/ckpts/epoch_12.pth')['state_dict']
+    ckpt = torch.load('../pvrcnn/ckpts/epoch_59.pth')['state_dict']
     model.load_state_dict(ckpt, strict=True)
     return model, preprocessor, anchors
 

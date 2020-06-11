@@ -88,7 +88,7 @@ _C.REFINEMENT.MLPS = [256, 128]
 _C.DATA = CN()
 _C.DATA.CACHEDIR = '../data/cache/'
 _C.DATA.SPLITDIR = '../data/splitfiles/'
-_C.DATA.ROOTDIR = '../data/kitti/training/'
+_C.DATA.ROOTDIR = '../../../../../../kitti/training/'
 
 # Train
 _C.TRAIN = CN()
