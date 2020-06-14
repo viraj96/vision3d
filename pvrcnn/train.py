@@ -66,8 +66,8 @@ def train_model(model, dataloader, optimizer, lr_scheduler, loss_fn, epochs, sta
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=35)
             optimizer.step()
             lr_scheduler.step()
-            if (step % 10) == 0:
-                update_plot(losses, 'step')
+            # if (step % 10) == 0:
+            #     update_plot(losses, 'step')
         if (epoch % 3) == 0 or (epoch == epochs - 1):
             save_cpkt(model, optimizer, epoch)
 
@@ -100,6 +100,6 @@ if __name__ == '__main__':
     except RuntimeError:
         pass
     global plotter
-    plotter = VisdomLinePlotter(env='second')
+    # plotter = VisdomLinePlotter(env='second')
     cfg.merge_from_file('../configs/second/car.yaml')
     main()
