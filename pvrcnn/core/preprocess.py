@@ -20,6 +20,7 @@ class Preprocessor(nn.Module):
             point_cloud_range=cfg.GRID_BOUNDS,
             max_voxels=cfg.MAX_VOXELS,
             max_num_points=cfg.MAX_OCCUPANCY,
+            full_mean=False,
         )
         return voxel_generator
 
