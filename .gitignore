@@ -4,7 +4,6 @@ data/*
 pythonpath.sh
 **/__pycache__/*
 *.bin
-*.pth
 *.so
 *.pkl
 
